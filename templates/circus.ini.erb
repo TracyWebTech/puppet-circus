@@ -1,0 +1,37 @@
+[circus]
+<% if @endpoint -%>
+endpoint = <%= endpoint %>
+<% end -%>
+<% if @pubsub_endpoint -%>
+pubsub_endpoint = <%= pubsub_endpoint %>
+<% end -%>
+<% if @stats_endpoint -%>
+stats_endpoint = <%= stats_endpoint %>
+<% end -%>
+<% if @check_delay -%>
+check_delay = <%= check_delay %>
+<% end -%>
+<% if @include_dir -%>
+include_dir = <%= include_dir %>
+<% end -%>
+<% if @stream_backend -%>
+stream_backend = <%= stream_backend %>
+<% end -%>
+<% if @warmup_delay -%>
+warmup_delay = <%= warmup_delay %>
+<% end -%>
+<% if @httpd -%>
+httpd = <%= httpd %>
+<% end -%>
+<% if @httpd_host -%>
+httpd_host = <%= httpd_host %>
+<% end -%>
+<% if @httpd_port -%>
+httpd_port = <%= httpd_port %>
+<% end -%>
+<% if @debug -%>
+debug = <%= circus_debug %>
+<% end -%>
+<% if @respawn -%>
+respawn = <%= respawn %>
+<% end -%>
