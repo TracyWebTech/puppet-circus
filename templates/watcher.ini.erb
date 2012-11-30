@@ -1,0 +1,67 @@
+[watcher:<%= name %>]
+cmd = <%= cmd %>
+<% if @args -%>
+args = <%= args %>
+<% end -%>
+<% if @shell -%>
+shell = <%= shell %>
+<% end -%>
+<% if @working_dir -%>
+working_dir = <%= working_dir %>
+<% end -%>
+<% if @uid -%>
+uid = <%= uid %>
+<% end -%>
+<% if @gid -%>
+gid = <%= gid %>
+<% end -%>
+<% if @copy_env -%>
+copy_env = <%= copy_env %>
+<% end -%>
+<% if @copy_path -%>
+copy_path = <%= copy_path %>
+<% end -%>
+warmup_delay = <%= warmup_delay %>
+numprocesses = <%= numprocesses %>
+<% if @relimit -%>
+relimit = <%= relimit %>
+<% end -%>
+<% if @stderr_stream_class -%>
+stderr_stream.class = <%= stderr_stream_class %>
+<% end -%>
+<% if @stderr_stream_opts -%>
+stderr_stream_opts = <%= stderr_stream_opts %>
+<% end -%>
+<% if @stdout_stream_class -%>
+stdout_stream.class = <%= stdout_stream_class %>
+<% end -%>
+<% if @stdout_stream_opts -%>
+stdout_stream_opts = <%= stdout_stream_opts %>
+<% end -%>
+<% if @send_hup -%>
+send_hup = <%= send_hup %>
+<% end -%>
+<% if @max_retry -%>
+max_retry = <%= max_retry %>
+<% end -%>
+<% if @priority -%>
+priority = <%= priority %>
+<% end -%>
+<% if @singleton -%>
+singleton = <%= singleton %>
+<% end -%>
+<% if @use_sockets -%>
+use_sockets = <%= use_sockets %>
+<% end -%>
+<% if @max_age -%>
+max_age = <%= max_age %>
+<% end -%>
+<% if @max_age_variance -%>
+max_age_variance = <%= max_age_variance %>
+<% end -%>
+<% if @hooks -%>
+hooks = <%= hooks %>
+<% end -%>
+<% extra_conf.each do |variable, content| -%>
+<%= variable %> = <%= content %>
+<% end -%>
