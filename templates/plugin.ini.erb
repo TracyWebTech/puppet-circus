@@ -1,0 +1,5 @@
+[plugin:<%= name %>]
+use = <%= use %>
+<% variables.each do |variable, content| -%>
+<%= variable %> = <%= content %>
+<% end -%>
