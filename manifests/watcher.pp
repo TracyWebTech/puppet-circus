@@ -48,6 +48,7 @@ define circus::watcher(
       hasstatus  => false,
       provider   => base,
       subscribe  => File["circus-watcher-${name}"],
+      require    => Service['circus']
     }
   }
 
