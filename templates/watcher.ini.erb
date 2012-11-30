@@ -29,14 +29,14 @@ relimit = <%= relimit %>
 <% if @stderr_stream_class -%>
 stderr_stream.class = <%= stderr_stream_class %>
 <% end -%>
-<% if @stderr_stream_opts -%>
-stderr_stream_opts = <%= stderr_stream_opts %>
+<% stderr_stream_opts.each do |key,val| -%>
+stderr_stream.<%= key %> = <%= val %>
 <% end -%>
 <% if @stdout_stream_class -%>
 stdout_stream.class = <%= stdout_stream_class %>
 <% end -%>
-<% if @stdout_stream_opts -%>
-stdout_stream_opts = <%= stdout_stream_opts %>
+<% stdout_stream_opts.each do |key,val| -%>
+stdout_stream.<%= key %> = <%= val %>
 <% end -%>
 <% if @send_hup -%>
 send_hup = <%= send_hup %>
@@ -59,8 +59,8 @@ max_age = <%= max_age %>
 <% if @max_age_variance -%>
 max_age_variance = <%= max_age_variance %>
 <% end -%>
-<% if @hooks -%>
-hooks = <%= hooks %>
+<% hooks.each do |hook_type, hook| -%>
+hooks.<%= hook_type %> = <%= hook %>
 <% end -%>
 <% extra_conf.each do |variable, content| -%>
 <%= variable %> = <%= content %>

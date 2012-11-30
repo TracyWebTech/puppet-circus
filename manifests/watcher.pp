@@ -12,9 +12,9 @@ define circus::watcher(
   $numprocesses,
   $relimit = undef,
   $stderr_stream_class = undef,
-  $stderr_stream_opts = undef,
+  $stderr_stream_opts = {},
   $stdout_stream_class = undef,
-  $stdout_stream_opts = undef,
+  $stdout_stream_opts = {},
   $send_hup = undef,
   $max_retry = undef,
   $priority = undef,
@@ -22,7 +22,7 @@ define circus::watcher(
   $use_sockets = undef,
   $max_age = undef,
   $max_age_variance = undef,
-  $hooks = undef,
+  $hooks = {},
   $extra_conf = {}
 ) {
 
