@@ -1,14 +1,14 @@
 class circus (
-  $endpoint        = undef,
-  $pubsub_endpoint = undef,
-  $stats_endpoint  = undef,
-  $check_delay     = undef,
+  $endpoint        = 'tcp://127.0.0.1:5555',
+  $pubsub_endpoint = 'tcp://127.0.0.1:5556',
+  $stats_endpoint  = 'tcp://127.0.0.1:5557',
+  $check_delay     = 5,
   $stream_backend  = undef,
   $warmup_delay    = undef,
   $httpd           = undef,
   $httpd_host      = undef,
   $httpd_port      = undef,
-  $debug           = undef,
+  $debug           = 'False',
   $respawn         = undef
 ) {
 
